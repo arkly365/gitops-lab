@@ -1,3 +1,3 @@
 image:
-  repository: ghcr.io/arkly365/spring-monitor
-  tag: v1
+  repository: ghcr.io/arkly365/springboot-demo
+  tag: v2

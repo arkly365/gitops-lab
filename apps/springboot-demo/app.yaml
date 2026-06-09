@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: springboot-demo
+  namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/arkly365/springboot-helm-chart.git
+    targetRevision: main
+    path: .
+    helm:
+      valueFiles:
+        - values-demo.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring-demo
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
