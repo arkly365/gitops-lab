@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/arkly365/springboot-demo
   pullPolicy: IfNotPresent
-  tag: "v3"
+  tag: "v2"
 
 containerPort: 8080
 
